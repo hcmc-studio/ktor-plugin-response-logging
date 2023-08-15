@@ -31,7 +31,7 @@ publishing {
         create<MavenPublication>("jitpack") {
             groupId = "com.github.hcmc-studio"
             artifactId = project.name
-            version = project_version
+            version = "$project_version-release"
             from(components["java"])
         }
     }
