@@ -6,7 +6,7 @@ import org.slf4j.event.Level
 
 class ResponseLoggingConfiguration {
     var level = Level.TRACE
-    var logger = LoggerFactory.getLogger("ResponseLogging")
+    var logger = LoggerFactory.getLogger("ResponseLogger")
     var format: suspend (call: ApplicationCall, body: Any) -> String = { _, _ -> throw NotImplementedError() }
 }
 
