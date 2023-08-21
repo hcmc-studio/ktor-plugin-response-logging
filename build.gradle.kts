@@ -1,5 +1,7 @@
 val project_version: String by project
 val jdk_version: String by project
+val kotlinx_serialization_version: String by project
+val hcmc_extension_version: String by project
 val ktor_version: String by project
 
 plugins {
@@ -42,5 +44,11 @@ publishing {
 }
 
 dependencies {
+    implementation("com.github.hcmc-studio:ktor-plugin-content-negotiation:$hcmc_extension_version")
+    implementation("com.github.hcmc-studio:ktor-serialization-extension:$hcmc_extension_version")
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:$kotlinx_serialization_version")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:$kotlinx_serialization_version")
+
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
 }
